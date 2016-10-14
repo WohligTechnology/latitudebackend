@@ -14,7 +14,7 @@
     }, {
         "name": "Mobile",
         "isSort": "",
-        "tableRef": "mobile"
+        "tableRef": "phone"
     }],
     "action": [{
         "name": "edit",

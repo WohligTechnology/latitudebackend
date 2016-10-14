@@ -34,8 +34,8 @@
     }, {
         "name": "Mobile",
         "type": "text",
-        "tableRef": "mobile",
-        "model": "mobile",
+        "tableRef": "phone",
+        "model": "phone",
         "placeholder": "Enter mobile",
         "id": "input5",
         "validation": ["required", "trim", "unique"],
@@ -43,8 +43,17 @@
     }, {
         "name": "Occasion",
         "type": "textarea",
-        "tableRef": "occasion",
-        "model": "occasion",
+        "tableRef": "comment",
+        "model": "comment",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Time",
+        "type": "dateformat",
+        "tableRef": "time",
+        "model": "time",
         "placeholder": "Enter comments",
         "id": "input5",
         "validation": ["required", "trim", "unique"],
