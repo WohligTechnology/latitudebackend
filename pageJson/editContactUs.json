@@ -1,0 +1,69 @@
+{
+    "title": "Detail ContactUs",
+    "jsonPage": "viewContactUs",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Id",
+        "type": "hidden",
+        "tableRef": "_id",
+        "placeholder": "Enter id",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "_id"
+    },{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "model": "name",
+        "placeholder": "Enter name",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "model": "email",
+        "placeholder": "Enter email",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile",
+        "type": "text",
+        "tableRef": "mobile",
+        "model": "mobile",
+        "placeholder": "Enter mobile",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },  {
+        "name": "Comment",
+        "type": "textarea",
+        "tableRef": "comment",
+        "model": "comment",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitAssistance"
+    }, {
+        "name": "cancel",
+        "action": "cancelContactUs",
+        "stateName": "page({jsonName:'viewContactUs'})"
+    }],
+    "preApi": {
+        "url": "ContactUs/getOne",
+        "params": "_id"
+    },
+     "apiCall": {
+          "url": "ContactUs/save",
+          "params": "_id"
+      }
+}
