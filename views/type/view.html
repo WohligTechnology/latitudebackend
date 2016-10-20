@@ -59,7 +59,7 @@
         </md-subheader>
         <md-divider></md-divider>
         <md-list-item class="ls-head secondary-button-padding padlr16">
-            <p ng-repeat="field in json.fields">{{field.name}}</p>
+            <p ng-repeat="field in json.fields" class="word-b">{{field.name}}</p>
             <md-button aria-label="Expand" class="md-icon-button" ng-repeat="action in json.action">
                 <ng-md-icon class="" icon="{{action.icon}}" size="20" style="fill:black;"></ng-md-icon>
             </md-button>
@@ -70,7 +70,7 @@
         </div>
 
         <md-list-item ng-show="json.tableData.length>=0" ng-repeat="result in json.tableData track by $index" class="secondary-button-padding padlr16">
-            <p ng-repeat="field in json.fields">
+            <p ng-repeat="field in json.fields" class="word-b">
                 <span ng-if="field.type!='image' && result|getValue:field.tableRef:field.type!=''">{{result|getValue:field.tableRef:field.type}}</span>
                 <span ng-if="field.type!='image' && result|getValue:field.tableRef:field.type ==''"></span>
                 <span class="img-holder">

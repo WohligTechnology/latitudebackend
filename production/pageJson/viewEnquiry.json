@@ -1,5 +1,5 @@
 {
-    "title": "All Contact Us",
+    "title": "All Enquiries",
     "desciption": "",
     "pageType": "view",
       "hideCreate": true,
@@ -21,9 +21,9 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editContactUs",
+        "jsonPage": "editEnquiry",
         "fieldsToSend": ["_id"],
-        "callFindOne": "ContactUs/findOne"
+        "callFindOne": "enquiry/findOne"
     }],
     "button": [{
         "name": "excelexport",
@@ -38,7 +38,7 @@
     }],
 
     "apiCall": {
-        "url": "ContactUs/findLimited",
+        "url": "enquiry/findLimited",
         "params": ""
     }
 }

@@ -229,6 +229,13 @@ input[type=file] {
 .imageSize {
   margin-top: -20px;
 }
+
+.word-b {
+  display: inline-block;
+  width: 38px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis; }
 .min-w{
  .md-no-style {
    position: relative;
