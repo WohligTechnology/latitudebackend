@@ -1,0 +1,48 @@
+{
+    "title": "User",
+    "desciption": "",
+    "pageType": "view",
+    "fields": [{
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    },{
+      "name": "Email",
+      "isSort": "",
+      "tableRef": "email"
+  },{
+      "name": "Mobile",
+      "isSort": "",
+      "tableRef": "mobile"
+  },{
+        "name": "City",
+        "isSort": "",
+        "tableRef": "city"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editUser",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "User/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete Tag",
+        "content": "Are you sure you want to delete User?",
+        "api": "User/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "apiCall": {
+        "url": "User/search",
+        "params": ""
+    },
+    "createButtonState": "page({jsonName:'createUser'})"
+}

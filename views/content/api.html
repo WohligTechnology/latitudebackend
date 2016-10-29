@@ -20,8 +20,8 @@
           <md-button aria-label="Delete" class="md-icon-button" ng-click="copyApi(api,$index)" ng-if="api._id">
             <ng-md-icon class="" icon="content_copy" size="20" style="fill:white;"></ng-md-icon>
           </md-button>
-          <md-button aria-label="Delete" class="md-icon-button" ng-click="saveApi(api)" ng-if="!api._id && userForm.$valid">
-            <ng-md-icon class="" icon="save" size="20" style="fill:white;"></ng-md-icon>
+          <md-button aria-label="Delete" class="md-icon-button" ng-click="savedataApi(api)" ng-if="!api._id && userForm.$valid">
+            <ng-md-icon class="" icon="savedata" size="20" style="fill:white;"></ng-md-icon>
           </md-button>
         </div>
       </md-toolbar>
@@ -72,7 +72,7 @@
             <textarea columns="1" md-maxlength="150" ng-model="api.comment" rows="5"></textarea>
           </md-input-container>
 
-          <md-button class="md-raised md-primary" ng-click="saveApi(api)" ng-if="userForm.$valid">Save</md-button>
+          <md-button class="md-raised md-primary" ng-click="savedataApi(api)" ng-if="userForm.$valid">savedata</md-button>
         </form>
       </md-content>
     </div>

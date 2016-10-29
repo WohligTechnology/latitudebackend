@@ -1,9 +1,14 @@
 {
-    "title": "All Enquiries",
+    "title": "Enquiry",
     "desciption": "",
     "pageType": "view",
-      "hideCreate": true,
     "fields": [{
+        "name":"Enquiry Time",
+        "isSort": "",
+        "tableRef": "time",
+        "type":"dateFormat"
+
+    },{
         "name": "Name",
         "isSort": "",
         "tableRef": "name"
@@ -15,6 +20,10 @@
         "name": "Mobile",
         "isSort": "",
         "tableRef": "phone"
+    },{
+        "name": "Comment",
+        "isSort": "",
+        "tableRef": "comment"
     }],
     "action": [{
         "name": "edit",
@@ -23,22 +32,23 @@
         "action": "redirect",
         "jsonPage": "editEnquiry",
         "fieldsToSend": ["_id"],
-        "callFindOne": "enquiry/findOne"
-    }],
-    "button": [{
-        "name": "excelexport",
-        "icon": "print",
-        "color": "blue",
-        "action": "excelexport"
+        "callFindOne": "Enquiry/getOne"
     }, {
-        "name": "uploadcsv",
+        "name": "delete",
         "icon": "delete",
         "color": "red",
-        "action": "uploadcsv"
+        "action": "apiCallConfirm",
+        "title": "Delete Tag",
+        "content": "Are you sure you want to delete User?",
+        "api": "Enquiry/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
     }],
-
     "apiCall": {
-        "url": "enquiry/findLimited",
+        "url": "Enquiry/search",
         "params": ""
-    }
+    },
+    "createButtonState": "page({jsonName:'createEnquiry'})"
 }

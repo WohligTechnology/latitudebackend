@@ -4,13 +4,20 @@
 @import "../bower_components/tinymce-dist/skins/lightgray/content.min.css";
 @import "../bower_components/tinymce-dist/skins/lightgray/skin.min.css";
 body {
-
+font-size:14px;
 }
 img.loading {
   text-align: center;
   opacity: 1;
   width: 32px !important;
   height: auto;
+}
+.word-b{
+  display: inline-block;
+    width: 38px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
 }
 img {
   opacity: 0;
@@ -107,7 +114,7 @@ float: left;
 padding: .5rem .75rem;
 margin-left: -1px;
 line-height: 1.5;
-color: #0275d8;
+color: #03A9F4;
 text-decoration: none;
 background-color: #fff;
 border: 1px solid #ddd;
@@ -187,68 +194,31 @@ border-radius: .25rem;
     padding: 0 20px;
 }
 li.pagination-page.ng-scope.active a {
-    background: #0275d8;
+    background: #03A9F4;
     color: white;
 }
 
-.search-input {
-  padding: 0px 10px;
-  input {
-    width: 25%;
-    padding: 10px;
-  }
-}
-.main-sec{
-  position: relative;
-}
-.pos-abs{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-.w100{
-  width: 100%;
-}
-.main-img{
-  margin: 0px auto;
-
-}
-.w200{
-  width: 200px;
-}
-.mce-panel {
-      margin-top: 40px !important;
-}
-label {
-  color:#333 !important;
-}
-input[type=file] {
-    margin-top: 30px;
-}
-.imageSize {
-  margin-top: -20px;
+md-list-item, md-list-item .md-list-item-inner {
+  font-size: 17px;
 }
 
-.word-b {
-  display: inline-block;
-  width: 38px;
-  white-space: nowrap;
-  overflow: hidden !important;
-  text-overflow: ellipsis; }
-.min-w{
- .md-no-style {
-   position: relative;
-   padding: 0px 0px;
-   flex: 1 1 auto;
-   position: absolute;
-   min-height: 48px !important;
+ .min-w{
+  .md-no-style {
+    position: relative;
+    padding: 0px 0px;
+    flex: 1 1 auto;
+    position: absolute;
+    min-height: 48px !important;
 }
 .md-list-item-inner{
- &:before{
-       padding: 0px 12px;
- }
+  &:before{
+        padding: 0px 12px;
+  }
 }
+}
+
+md-input-container .md-placeholder, md-input-container label:not(.md-no-float):not(.md-container-ignore){
+  transform: none !important;
 }
 /*
 Copyright 2016 Google Inc. All Rights Reserved.

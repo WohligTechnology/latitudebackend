@@ -1,5 +1,5 @@
 {
-    "title": "Detail ContactUs",
+    "title": "Edit ContactUs Details",
     "jsonPage": "viewContactUs",
     "desciption": "",
     "pageType": "edit",
@@ -51,7 +51,7 @@
         "url": ""
     },{
         "name": "Time",
-        "type": "dateformat",
+        "type": "dateFormat",
         "tableRef": "time",
         "model": "time",
         "placeholder": "Enter comments",
@@ -61,18 +61,17 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitAssistance"
+        "action": "submitContactUs"
     }, {
         "name": "cancel",
-        "action": "cancelContactUs",
         "stateName": "page({jsonName:'viewContactUs'})"
     }],
+    "apiCall": {
+        "url": "ContactUs/save",
+        "params": "_id"
+    },
     "preApi": {
         "url": "ContactUs/getOne",
         "params": "_id"
-    },
-     "apiCall": {
-          "url": "ContactUs/save",
-          "params": "_id"
-      }
+    }
 }

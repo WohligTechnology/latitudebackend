@@ -1,7 +1,7 @@
 {
-  "name": "latitude",
+  "name": "jppworldfront",
   "version": "0.0.1",
-  "description": "latitude",
+  "description": "jppworldfront",
   "main": "gulpfile.js",
   "dependencies": {
     "crypto-js": "^3.1.6",

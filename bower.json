@@ -1,11 +1,11 @@
 {
-  "name": "latitude",
+  "name": "jppworldfront",
   "version": "0.0.1",
   "homepage": "https://www.wohlig.com",
   "authors": [
     "tushar@wohlig.com"
   ],
-  "description": "latitude",
+  "description": "JPP world front",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -20,7 +20,7 @@
     "angular-sanitize": "~1.4.3",
     "angular-ui": "~0.4.0",
     "bourbon": "~4.2.5",
-    "font-awesome": "^4.6.3",
+    "font-awesome": "~4.4.0",
     "jquery": "~2.1.4",
     "lodash": "~3.10.0",
     "ui-router": "~0.2.15",

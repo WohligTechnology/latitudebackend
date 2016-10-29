@@ -50,7 +50,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         controller: 'jsonViewCtrl'
     })
     .state('pageno', {
-        url: "/page/:jsonName/:no/:search",
+        url: "/page/:jsonName/:no",
         templateUrl: "views/template.html",
         controller: 'jsonViewCtrl'
     });
@@ -76,7 +76,18 @@ firstapp.filter('uploadpath', function() {
         }
     };
 });
+// firstapp.filter('dateFormat', function($filter) {
+//     return function(input) {
+    
 
+//     };
+// });
+firstapp.filter('myDate', function($filter) {    
+    var angularDateFilter = $filter('date');
+    return function(theDate) {
+       return angularDateFilter(theDate, 'dd MMMM @ HH:mm:ss');
+    }
+});
 firstapp.filter('getValue', function($filter) {
     return function(input, keyVal, type) {
         if (keyVal) {
@@ -107,6 +118,50 @@ firstapp.filter('getValue', function($filter) {
     };
 });
 
+firstapp.directive('onlyDigits', function() {
+    return {
+        require: 'ngModel',
+        restrict: 'A',
+        link: function(scope, element, attr, ctrl) {
+            function inputValue(val) {
+                if (val) {
+                    var digits = val.replace(/[^0-9]/g, '');
+
+                    if (digits !== val) {
+                        ctrl.$setViewValue(digits);
+                        ctrl.$render();
+                    }
+                    return parseInt(digits, 10);
+                }
+                return undefined;
+            }
+            ctrl.$parsers.push(inputValue);
+        }
+    };
+});
+
+
+firstapp.directive('latLong', function() {
+    return {
+        require: 'ngModel',
+        restrict: 'A',
+        link: function(scope, element, attr, ctrl) {
+            function inputValue(val) {
+                if (val) {
+                    var digits = val.replace(/[^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$]/g, '');
+
+                    if (digits !== val) {
+                        ctrl.$setViewValue(digits);
+                        ctrl.$render();
+                    }
+                    return digits;
+                }
+                return undefined;
+            }
+            ctrl.$parsers.push(inputValue);
+        }
+    };
+});
 
 firstapp.directive('imageonload', function() {
     return {
