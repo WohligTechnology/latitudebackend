@@ -58,6 +58,43 @@
         "id": "input5",
         "validation": ["required", "trim", "unique"],
         "url": ""
+    },{
+        "name": "Status",
+        "type": "select",
+        "option": "single",
+        "tableRef": "status",
+        "model": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "validation": ["", "trim", "unique"],
+        "url": [{
+            "value": "Pending",
+            "name": "Pending"
+        }, {
+            "value": "Spoke With Client",
+            "name": "Spoke With Client"
+        },{
+            "value": "Commented",
+            "name": "Commented"
+        }]
+    },{
+        "name": "Note",
+        "type": "textarea",
+        "tableRef": "note",
+        "model": "note",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Time updated",
+        "type": "dateFormat",
+        "tableRef": "updatedAt",
+        "model": "updatedAt",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }],
     "action": [{
         "name": "submit",

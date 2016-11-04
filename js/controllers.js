@@ -18,7 +18,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             // console.log(data);
             if (data.value === true) {
                 $state.go("page", {
-                    jsonName: "viewBranchRegistration"
+                    jsonName: "viewEnquiry"
                 });
                 $.jStorage.set("user", data);
             } else if (data.value === false) {

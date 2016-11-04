@@ -216,7 +216,9 @@ md-list-item, md-list-item .md-list-item-inner {
   }
 }
 }
-
+md-sidenav {
+    max-width: 140px;
+}
 md-input-container .md-placeholder, md-input-container label:not(.md-no-float):not(.md-container-ignore){
   transform: none !important;
 }

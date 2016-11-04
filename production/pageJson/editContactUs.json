@@ -1,5 +1,5 @@
 {
-    "title": "Detail ContactUs",
+    "title": "Edit ContactUs Details",
     "jsonPage": "viewContactUs",
     "desciption": "",
     "pageType": "edit",
@@ -51,9 +51,46 @@
         "url": ""
     },{
         "name": "Time",
-        "type": "dateformat",
+        "type": "dateFormat",
         "tableRef": "time",
         "model": "time",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Status",
+        "type": "select",
+        "option": "single",
+        "tableRef": "status",
+        "model": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "validation": ["", "trim", "unique"],
+        "url": [{
+            "value": "Pending",
+            "name": "Pending"
+        }, {
+            "value": "Spoke With Client",
+            "name": "Spoke With Client"
+        },{
+            "value": "Commented",
+            "name": "Commented"
+        }]
+    },{
+        "name": "Note",
+        "type": "textarea",
+        "tableRef": "note",
+        "model": "note",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Time updated",
+        "type": "dateFormat",
+        "tableRef": "updatedAt",
+        "model": "updatedAt",
         "placeholder": "Enter comments",
         "id": "input5",
         "validation": ["required", "trim", "unique"],
@@ -61,18 +98,17 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitAssistance"
+        "action": "submitContactUs"
     }, {
         "name": "cancel",
-        "action": "cancelContactUs",
         "stateName": "page({jsonName:'viewContactUs'})"
     }],
+    "apiCall": {
+        "url": "ContactUs/save",
+        "params": "_id"
+    },
     "preApi": {
         "url": "ContactUs/getOne",
         "params": "_id"
-    },
-     "apiCall": {
-          "url": "ContactUs/save",
-          "params": "_id"
-      }
+    }
 }

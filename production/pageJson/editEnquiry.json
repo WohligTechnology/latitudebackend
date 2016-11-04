@@ -1,5 +1,5 @@
 {
-    "title": "Detail Enquiry",
+    "title": "Edit Enquiry Details",
     "jsonPage": "viewEnquiry",
     "desciption": "",
     "pageType": "edit",
@@ -50,10 +50,47 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Time",
-        "type": "dateformat",
+        "name": "Enquiry Time",
+        "type": "dateFormat",
         "tableRef": "time",
         "model": "time",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Status",
+        "type": "select",
+        "option": "single",
+        "tableRef": "status",
+        "model": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "validation": ["", "trim", "unique"],
+        "url": [{
+            "value": "Pending",
+            "name": "Pending"
+        }, {
+            "value": "Spoke With Client",
+            "name": "Spoke With Client"
+        },{
+            "value": "Commented",
+            "name": "Commented"
+        }]
+    },{
+        "name": "Note",
+        "type": "textarea",
+        "tableRef": "note",
+        "model": "note",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Time updated",
+        "type": "dateFormat",
+        "tableRef": "updatedAt",
+        "model": "updatedAt",
         "placeholder": "Enter comments",
         "id": "input5",
         "validation": ["required", "trim", "unique"],
@@ -61,18 +98,18 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitAssistance"
+        "action": "submitEnquiry"
     }, {
         "name": "cancel",
         "action": "cancelEnquiry",
         "stateName": "page({jsonName:'viewEnquiry'})"
     }],
-    "preApi": {
-        "url": "enquiry/getOne",
+    "apiCall": {
+        "url": "Enquiry/save",
         "params": "_id"
     },
-     "apiCall": {
-          "url": "enquiry/save",
-          "params": "_id"
-      }
+    "preApi": {
+        "url": "Enquiry/getOne",
+        "params": "_id"
+    }
 }
