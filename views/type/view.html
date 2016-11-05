@@ -33,8 +33,8 @@
                 <ng-md-icon class="" icon="{{action.icon}}" size="20" style="fill:black;"></ng-md-icon>
             </md-button>
         </md-list-item>
-        <div ng-hide="json.tableData.length>=0" class="loadingbox">
-            Loading...
+        <!--<div ng-hide="json.tableData.length==0" class="loadingbox">
+            Loading...</div>-->
             <!-- if Table Sortable -->
             <div ng-model="json.tableData" ui-sortable="sortableOptions" ng-if="json.sortable">
                 <md-list-item ng-show="json.tableData.length>=0 " ng-repeat="result in json.tableData" class="secondary-button-padding padlr16">

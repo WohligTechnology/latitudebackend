@@ -10,7 +10,7 @@
       <input ng-model="json.editData[field.model]" type="{{field.type}}" id="{{field.id}}">
     </div>
     <div ng-if="field.type=='text' || field.type=='email'">
-      <label>{{field.name}}</label>
+      <label>{{field.name}}11</label>
       <input ng-model="json.editData[field.model]" type="{{field.type}}" id="{{field.id}}" ng-if="field.tableRef!='user'">
       <input ng-model="armyName" type={{field.type}} ng-if="armyName" id="{{field.id}}" ng-if="field.tableRef=='user'">
       <!-- <div ng-messages="name.$error">

@@ -1,0 +1,58 @@
+{
+    "title": "Both",
+    "desciption": "",
+    "pageType": "view",
+    "sortable": "Both/sort",
+    "fields": [{
+        "name": "Time",
+        "isSort": "",
+        "tableRef": "time",
+        "type": "dateFormat"
+    }, {
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    }, {
+        "name": "Mobile",
+        "isSort": "",
+        "tableRef": "phone"
+    }, {
+        "name": "Email",
+        "isSort": "",
+        "tableRef": "email"
+    }, {
+        "name": "Event Date",
+        "isSort": "",
+        "tableRef": "eventDate"
+    }, {
+        "name": "Comment",
+        "isSort": "",
+        "tableRef": "comment"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editBoth",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "Both/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete Both",
+        "content": "Are you sure you want to delete Both?",
+        "api": "Both/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "apiCall": {
+        "url": "Both/search",
+        "params": ""
+    },
+    "createButtonState": "page({jsonName:'createBoth'})"
+}
