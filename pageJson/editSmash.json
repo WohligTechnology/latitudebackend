@@ -1,0 +1,122 @@
+{
+    "title": "Edit Smash Details",
+    "jsonPage": "viewSmash",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Id",
+        "type": "hidden",
+        "tableRef": "_id",
+        "placeholder": "Enter id",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "_id"
+    }, {
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "model": "name",
+        "placeholder": "Enter name",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile",
+        "type": "text",
+        "tableRef": "phone",
+        "model": "phone",
+        "placeholder": "Enter mobile",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "model": "email",
+        "placeholder": "Enter email",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Comment",
+        "type": "textarea",
+        "tableRef": "comment",
+        "model": "comment",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Event Date",
+        "type": "date",
+        "tableRef": "eventDate",
+        "model": "eventDate",
+        "id": "input5",
+        "validation": ["trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Time",
+        "type": "dateFormat",
+        "tableRef": "time",
+        "model": "time",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Status",
+        "type": "select",
+        "option": "single",
+        "tableRef": "status",
+        "model": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "validation": ["", "trim", "unique"],
+        "url": [{
+            "value": "Pending",
+            "name": "Pending"
+        }, {
+            "value": "Spoke With Client",
+            "name": "Spoke With Client"
+        }, {
+            "value": "Commented",
+            "name": "Commented"
+        }]
+    }, {
+        "name": "Note",
+        "type": "textarea",
+        "tableRef": "note",
+        "model": "note",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Time updated",
+        "type": "dateFormat",
+        "tableRef": "updatedAt",
+        "model": "updatedAt",
+        "placeholder": "Enter comments",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitSmash"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewSmash'})"
+    }],
+    "apiCall": {
+        "url": "Smash/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Smash/getOne",
+        "params": "_id"
+    }
+}
