@@ -1,14 +1,17 @@
 {
-    "title": "1899",
+    "title": "1899 Latitude",
     "desciption": "",
     "pageType": "view",
-    "sortable": "1899/sort",
+    "sortable": "Latitude/sort",
     "fields": [{
         "name": "Time",
         "isSort": "",
         "tableRef": "time",
         "type": "dateFormat"
-    }, {
+    }
+    
+    ,
+     {
         "name": "Name",
         "isSort": "",
         "tableRef": "name"
@@ -34,25 +37,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "edit1899",
+        "jsonPage": "editLatitude",
         "fieldsToSend": ["_id"],
-        "callFindOne": "1899/getOne"
+        "callFindOne": "Latitude/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete 1899",
-        "content": "Are you sure you want to delete 1899?",
-        "api": "1899/delete",
+        "title": "Delete Latitude",
+        "content": "Are you sure you want to delete Latitude?",
+        "api": "Latitude/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "1899/search",
+        "url": "Latitude/getAll",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'create1899'})"
+    "createButtonState": "page({jsonName:'createLatitude'})"
 }

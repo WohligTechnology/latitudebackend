@@ -5,7 +5,7 @@
   </md-list>
 
 <form name="plan" class="padlr16">
-  <md-input-container class="md-block" ng-repeat="field in json.fields">
+  <md-input-container class="md-block" ng-repeat="field in json.fields" >
     <div ng-if="field.type=='hidden'">
       <input ng-model="json.editData[field.model]" type="{{field.type}}" id="{{field.id}}">
     </div>
@@ -25,7 +25,7 @@
     <div ng-if="field.type=='select'">
       <label>{{field.name}}</label>
       <md-select ng-model="json.editData[field.model]">
-        <md-option ng-repeat="item in field.url" value="{{item._id}}">{{item.name}}</md-option>
+        <md-option ng-repeat="item in field.url " value="{{item._id}}" >{{item.name}}</md-option>
       </md-select>
     </div>
     <div ng-if="field.type=='selectFromTable'">

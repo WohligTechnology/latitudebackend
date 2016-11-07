@@ -51,7 +51,7 @@
         }]
     }],
     "apiCall": {
-        "url": "Both/search",
+        "url": "Both/getAll",
         "params": ""
     },
     "createButtonState": "page({jsonName:'createBoth'})"

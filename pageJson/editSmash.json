@@ -18,9 +18,10 @@
     {
         "name": "Event Type",
         "type": "select",
-        "option": "single",
+
         "tableRef": "eventType",
         "model": "eventType",
+        "option":"multiple",
         "placeholder": "Enter EventType",
         "id": "input3",
         "validation": ["", "trim", "unique"],

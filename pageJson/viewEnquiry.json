@@ -47,7 +47,7 @@
         }]
     }],
     "apiCall": {
-        "url": "Enquiry/search",
+        "url": "Enquiry/getAll",
         "params": ""
     },
     "createButtonState": "page({jsonName:'createEnquiry'})"

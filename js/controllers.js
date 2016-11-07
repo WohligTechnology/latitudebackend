@@ -305,11 +305,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     NavigationService.findProjects($scope.apiName, $scope.pagination, function (findData) {
                         console.log(findData);
                         if (findData.value !== false) {
-                            if (findData.data && findData.data.results && findData.data.results.length > 0) {
+                            if (findData.data && findData.data && findData.data.length > 0) {
                                 $scope.pageInfo.lastpage = findData.data.totalpages;
                                 $scope.pageInfo.pagenumber = findData.data.pagenumber;
                                 $scope.pageInfo.totalitems = $scope.pagination.pagesize * findData.data.totalpages;
-                                $scope.json.tableData = findData.data.results;
+                                $scope.json.tableData = findData.data;
                             } else {
                                 $scope.json.tableData = [];
                             }

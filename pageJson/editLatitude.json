@@ -1,6 +1,6 @@
 {
-    "title": "Edit 1899 Details",
-    "jsonPage": "view1899",
+    "title": "Edit Latitude Details",
+    "jsonPage": "viewLatitude",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -16,7 +16,7 @@
     },  {
         "name": "Event Type",
         "type": "select",
-        "option": "single",
+        "option": "multiple",
         "tableRef": "eventType",
         "model": "eventType",
         "placeholder": "Enter EventType",
@@ -193,17 +193,17 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submit1899"
+        "action": "submitLatitude"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'view1899'})"
+        "stateName": "page({jsonName:'viewLatitude'})"
     }],
     "apiCall": {
-        "url": "1899/save",
+        "url": "Latitude/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "1899/getOne",
+        "url": "Latitude/getOne",
         "params": "_id"
     }
 }

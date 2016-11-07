@@ -51,7 +51,7 @@
         }]
     }],
     "apiCall": {
-        "url": "Smash/search",
+        "url": "Smash/getAll",
         "params": ""
     },
     "createButtonState": "page({jsonName:'createSmash'})"
