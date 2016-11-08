@@ -1,5 +1,5 @@
-var adminurl = "http://104.155.129.33:92/";
-// var adminurl = "http://localhost:1337/";
+//var adminurl = "http://104.155.129.33:92/";
+ var adminurl = "http://localhost:1337/";
 //var adminurl = "http://192.168.1.116:1337/";
 var uploadurl = adminurl + "upload/";
 var imgpath = uploadurl + "readFile/";
@@ -17,22 +17,22 @@ var navigationservice = angular.module('navigationservice', [])
         link: "#/page/viewContactUs",
         subnav: []
     }
-    // , {
-    //     name: "Smash",
-    //     classis: "active",
-    //     link: "#/page/viewSmash",
-    //     subnav: []
-    // }, {
-    //     name: "1899 Latitude",
-    //     classis: "active",
-    //     link: "#/page/viewLatitude",
-    //     subnav: []
-    // }, {
-    //     name: "Both",
-    //     classis: "active",
-    //     link: "#/page/viewBoth",
-    //     subnav: []
-    // }
+     , {
+         name: "Smash",
+         classis: "active",
+         link: "#/page/viewSmash",
+         subnav: []
+     }, {
+         name: "1899 Latitude",
+         classis: "active",
+         link: "#/page/viewLatitude",
+         subnav: []
+     }, {
+         name: "Both",
+         classis: "active",
+         link: "#/page/viewBoth",
+         subnav: []
+     }
     
     ];
 

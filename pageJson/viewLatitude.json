@@ -57,5 +57,5 @@
         "url": "Latitude/getAll",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createLatitude'})"
+    "createButtonState": "page({jsonName:'create'})"
 }

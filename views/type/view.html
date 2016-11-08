@@ -41,6 +41,7 @@
                     <p ng-repeat="field in json.fields" class="word-b">
                         <!---->
                         <span ng-if="field.type=='dateFormat' && result|getValue:field.tableRef:field.type!=''">{{result|getValue:field.tableRef:field.type |date:'medium'}}</span>
+                        
                         <!---->
                         <span ng-if="field.type!='dateFormat' && field.type!='image' && result|getValue:field.tableRef:field.type!=''">{{result|getValue:field.tableRef:field.type}}</span>
                         <span ng-if="field.type!='image' && result|getValue:field.tableRef:field.type ==''"></span>
