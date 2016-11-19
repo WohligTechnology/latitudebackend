@@ -5,153 +5,171 @@
     "pageType": "edit",
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Id",
-        "type": "hidden",
-        "tableRef": "_id",
-        "placeholder": "Enter id",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "_id"
-    }, 
-    
-    {
-        "name": "Event Type",
-        "type": "select",
+            "name": "Id",
+            "type": "hidden",
+            "tableRef": "_id",
+            "placeholder": "Enter id",
+            "id": "input1",
+            "validation": ["required", "trim", "unique"],
+            "url": "",
+            "model": "_id"
+        },
 
-        "tableRef": "eventType",
-        "model": "eventType",
-        "option":"multiple",
-        "placeholder": "Enter EventType",
-        "id": "input3",
-        "validation": ["", "trim", "unique"],
-        "url": [{
-            "value": "Corporate Events",
-            "name": "Corporate Events"
-        },
         {
-            "value": "Annual General Meeting",
-            "name": "Annual General Meeting"
-        },
-        {
-            "value": "Product/ Service Launch",
-            "name": "Product/ Service Launch"
-        },
-        {
-            "value": "Employee Training Session",
-            "name": "Employee Training Session"
-        },
-         {
-            "value": "Panel Discussion",
-            "name": "Panel Discussion"
-        },
-        
-        {
-            "value": "Education Fair",
-            "name": "Education Fair"
-        },
-        {
-            "value": "Fashion Shows",
-            "name": "Fashion Shows"
-        },
-        {
-            "value": "Comic & Gaming Expos",
-            "name": "Comic & Gaming Expos"
-        }]
-    }
-    
-    ,{
-        "name": "Name",
-        "type": "text",
-        "tableRef": "name",
-        "model": "name",
-        "placeholder": "Enter name",
-        "id": "input5",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Mobile",
-        "type": "text",
-        "tableRef": "phone",
-        "model": "phone",
-        "placeholder": "Enter mobile",
-        "id": "input5",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Email",
-        "type": "text",
-        "tableRef": "email",
-        "model": "email",
-        "placeholder": "Enter email",
-        "id": "input5",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Comment",
-        "type": "textarea",
-        "tableRef": "comment",
-        "model": "comment",
-        "placeholder": "Enter comments",
-        "id": "input5",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Event Date",
-        "type": "date",
-        "tableRef": "eventdate",
-        "placeholder": "Select from date",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "eventdate"
-    }, {
-        "name": "Time",
-        "type": "dateFormat",
-        "tableRef": "time",
-        "model": "time",
-        "placeholder": "Enter comments",
-        "id": "input5",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Status",
-        "type": "select",
-        "option": "single",
-        "tableRef": "status",
-        "model": "status",
-        "placeholder": "Enter status",
-        "id": "input3",
-        "validation": ["", "trim", "unique"],
-        "url": [{
-            "value": "Pending",
-            "name": "Pending"
+            "name": "Event Type",
+            "type": "select",
+
+            "tableRef": "eventType",
+            "model": "eventType",
+            "option": "multiple",
+            "placeholder": "Enter EventType",
+            "id": "input3",
+            "validation": ["", "trim", "unique"],
+            "url": [{
+                    "value": "Corporate Events",
+                    "name": "Corporate Events"
+                }, {
+                    "value": "Annual General Meeting",
+                    "name": "Annual General Meeting"
+                }, {
+                    "value": "Product/ Service Launch",
+                    "name": "Product/ Service Launch"
+                }, {
+                    "value": "Employee Training Session",
+                    "name": "Employee Training Session"
+                }, {
+                    "value": "Panel Discussion",
+                    "name": "Panel Discussion"
+                },
+
+                {
+                    "value": "Education Fair",
+                    "name": "Education Fair"
+                }, {
+                    "value": "Fashion Shows",
+                    "name": "Fashion Shows"
+                }, {
+                    "value": "Comic & Gaming Expos",
+                    "name": "Comic & Gaming Expos"
+                }
+            ]
+        }
+
+        , {
+            "name": "Name",
+            "type": "text",
+            "tableRef": "name",
+            "model": "name",
+            "placeholder": "Enter name",
+            "id": "input5",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
         }, {
-            "value": "Spoke With Client",
-            "name": "Spoke With Client"
+            "name": "Mobile",
+            "type": "text",
+            "tableRef": "phone",
+            "model": "phone",
+            "placeholder": "Enter mobile",
+            "id": "input5",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
         }, {
-            "value": "Commented",
-            "name": "Commented"
-        }]
-    }, {
-        "name": "Note",
-        "type": "textarea",
-        "tableRef": "note",
-        "model": "note",
-        "placeholder": "Enter comments",
-        "id": "input5",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Time updated",
-        "type": "dateFormat",
-        "tableRef": "updatedAt",
-        "model": "updatedAt",
-        "placeholder": "Enter comments",
-        "id": "input5",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }],
+            "name": "Email",
+            "type": "text",
+            "tableRef": "email",
+            "model": "email",
+            "placeholder": "Enter email",
+            "id": "input5",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Comment",
+            "type": "textarea",
+            "tableRef": "comment",
+            "model": "comment",
+            "placeholder": "Enter comments",
+            "id": "input5",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        },
+
+        {
+            "name": "No. of People",
+            "type": "select",
+            "option": "single",
+            "tableRef": "people",
+            "model": "people",
+            "placeholder": "Enter No. of People",
+            "id": "input3",
+            "validation": ["", "trim", "unique"],
+            "url": [{
+                "value": "20 to 50",
+                "name": "20 to 50"
+            }, {
+                "value": "50 to 100",
+                "name": "50 to 100"
+            }, {
+                "value": "100 to 300",
+                "name": "100 to 300"
+            }, {
+                "value": "300 to 500",
+                "name": "300 to 500"
+            }, {
+                "value": "500 to 700",
+                "name": "500 to 700"
+            }]
+        },
+
+
+
+        {
+            "name": "Time",
+            "type": "dateFormat",
+            "tableRef": "time",
+            "model": "time",
+            "placeholder": "Enter comments",
+            "id": "input5",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Status",
+            "type": "select",
+            "option": "single",
+            "tableRef": "status",
+            "model": "status",
+            "placeholder": "Enter status",
+            "id": "input3",
+            "validation": ["", "trim", "unique"],
+            "url": [{
+                "value": "Pending",
+                "name": "Pending"
+            }, {
+                "value": "Spoke With Client",
+                "name": "Spoke With Client"
+            }, {
+                "value": "Commented",
+                "name": "Commented"
+            }]
+        }, {
+            "name": "Note",
+            "type": "textarea",
+            "tableRef": "note",
+            "model": "note",
+            "placeholder": "Enter comments",
+            "id": "input5",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Time updated",
+            "type": "dateFormat",
+            "tableRef": "updatedAt",
+            "model": "updatedAt",
+            "placeholder": "Enter comments",
+            "id": "input5",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }
+    ],
     "action": [{
         "name": "submit",
         "action": "submitSmash"

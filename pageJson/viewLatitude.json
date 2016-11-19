@@ -8,10 +8,7 @@
         "isSort": "",
         "tableRef": "time",
         "type": "dateFormat"
-    }
-    
-    ,
-     {
+    }, {
         "name": "Name",
         "isSort": "",
         "tableRef": "name"
@@ -24,9 +21,9 @@
         "isSort": "",
         "tableRef": "email"
     }, {
-        "name": "Event Date",
+        "name": "No. of People",
         "isSort": "",
-        "tableRef": "eventDate"
+        "tableRef": "people"
     }, {
         "name": "Comment",
         "isSort": "",

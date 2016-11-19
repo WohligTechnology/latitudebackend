@@ -50,14 +50,6 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Event Date",
-        "type": "date",
-        "tableRef": "eventdate",
-        "model": "eventdate",
-        "id": "input5",
-        "validation": ["trim", "unique"],
-        "url": ""
-    }, {
         "name": "Time",
         "type": "dateFormat",
         "tableRef": "time",

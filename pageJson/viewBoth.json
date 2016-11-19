@@ -21,9 +21,9 @@
         "isSort": "",
         "tableRef": "email"
     }, {
-        "name": "Event Date",
+        "name": "No. of People",
         "isSort": "",
-        "tableRef": "eventDate"
+        "tableRef": "people"
     }, {
         "name": "Comment",
         "isSort": "",
